@@ -1,0 +1,41 @@
+﻿<Window x:Class="word_blitz_generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:word_blitz_generator"
+        mc:Ignorable="d"
+        Title="Word Blitz Generator" Height="513.627" Width="1014.139" FocusManager.FocusedElement="{Binding ElementName=Letter1}">
+	<Grid RenderTransformOrigin="1.038,0.481">
+
+		<TextBox Name="Letter1" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="26,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper"  KeyUp="Letter_OnChanged" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}" />
+		<TextBox Name="Letter2" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="107,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter3" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="188,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter4" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="269,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+
+		<TextBox Name="Letter5" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="26,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter6" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="107,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged" Grid.ColumnSpan="2"/>
+		<TextBox Name="Letter7" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="188,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter8" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="269,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+
+		<TextBox Name="Letter9" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="26,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter10" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="107,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged" Grid.ColumnSpan="2"/>
+		<TextBox Name="Letter11" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="188,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter12" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="269,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+
+		<TextBox Name="Letter13" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="26,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper"  KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter14" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="107,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged" Grid.ColumnSpan="2"/>
+		<TextBox Name="Letter15" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="188,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="Letter_OnChanged"/>
+		<TextBox Name="Letter16" MaxLength="1" HorizontalAlignment="Left" Height="53" Margin="269,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" FontSize="27" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" CharacterCasing="Upper" KeyUp="LastLetter_OnKeyUp"/>
+
+		<Separator HorizontalAlignment="Left" Height="17" Margin="26,336,0,0" VerticalAlignment="Top" Width="298" Grid.ColumnSpan="2"/>
+
+		<DataGrid Name="WordsList"  HorizontalAlignment="Left" Height="425" Margin="366,26,0,0" VerticalAlignment="Top" Width="610">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Mot" Width="450" Binding="{Binding WORD}"/>
+				<DataGridTextColumn Header="Nombre de point" Width="160" SortDirection="Descending" Binding="{Binding POINTS}"/>
+			</DataGrid.Columns>
+		</DataGrid>
+
+	</Grid>
+</Window>
